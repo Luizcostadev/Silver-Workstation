@@ -1,0 +1,173 @@
+"$schema" = "https://starship.rs/config-schema.json"
+
+format = """
+[](#5A5963)\
+$os\
+$username\
+[](bg:#7A7985 fg:#5A5963)\
+$directory\
+[](fg:#7A7985 bg:#B7B6C1)\
+$git_branch\
+$git_status\
+[](fg:#B7B6C1 bg:#D8D7E0)\
+$c\
+$cpp\
+$elixir\
+$elm\
+$golang\
+$gradle\
+$haskell\
+$java\
+$julia\
+$maven\
+$nodejs\
+$bun\
+$nim\
+$rust\
+$scala\
+[](fg:#D8D7E0 bg:#7E9CB7)\
+$docker_context\
+[](fg:#7E9CB7 bg:#536A82)\
+$time\
+[ ](fg:#536A82)\
+"""
+
+# -------------------------
+# Username / OS
+# -------------------------
+
+[username]
+show_always = true
+style_user = "fg:#ECECF2 bg:#5A5963"
+style_root = "fg:#ECECF2 bg:#5A5963"
+format = "[ $user ]($style)"
+disabled = false
+
+[os]
+style = "fg:#ECECF2 bg:#5A5963"
+disabled = false
+
+# -------------------------
+# Directory
+# -------------------------
+
+[directory]
+style = "fg:#F4F4F6 bg:#7A7985"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+# -------------------------
+# Git
+# -------------------------
+
+[git_branch]
+symbol = " "
+style = "fg:#2F3138 bg:#B7B6C1"
+format = "[ $symbol$branch ]($style)"
+
+[git_status]
+style = "fg:#2F3138 bg:#B7B6C1"
+format = "[$all_status$ahead_behind ]($style)"
+
+# -------------------------
+# Linguagens
+# -------------------------
+
+[c]
+symbol = " "
+style = "fg:#2F3138 bg:#D8D7E0"
+format = "[ $symbol ($version) ]($style)"
+
+[cpp]
+symbol = " "
+style = "fg:#2F3138 bg:#D8D7E0"
+format = "[ $symbol ($version) ]($style)"
+
+[elixir]
+symbol = " "
+style = "fg:#2F3138 bg:#D8D7E0"
+format = "[ $symbol ($version) ]($style)"
+
+[elm]
+symbol = " "
+style = "fg:#2F3138 bg:#D8D7E0"
+format = "[ $symbol ($version) ]($style)"
+
+[golang]
+symbol = " "
+style = "fg:#2F3138 bg:#D8D7E0"
+format = "[ $symbol ($version) ]($style)"
+
+[gradle]
+style = "fg:#2F3138 bg:#D8D7E0"
+format = "[ $symbol ($version) ]($style)"
+
+[haskell]
+symbol = " "
+style = "fg:#2F3138 bg:#D8D7E0"
+format = "[ $symbol ($version) ]($style)"
+
+[java]
+symbol = " "
+style = "fg:#2F3138 bg:#D8D7E0"
+format = "[ $symbol ($version) ]($style)"
+
+[julia]
+symbol = " "
+style = "fg:#2F3138 bg:#D8D7E0"
+format = "[ $symbol ($version) ]($style)"
+
+[maven]
+style = "fg:#2F3138 bg:#D8D7E0"
+format = "[ $symbol ($version) ]($style)"
+
+[nodejs]
+symbol = " "
+style = "fg:#2F3138 bg:#D8D7E0"
+format = "[ $symbol ($version) ]($style)"
+
+[bun]
+symbol = " "
+style = "fg:#2F3138 bg:#D8D7E0"
+format = "[ $symbol ($version) ]($style)"
+
+[nim]
+symbol = "󰆥 "
+style = "fg:#2F3138 bg:#D8D7E0"
+format = "[ $symbol ($version) ]($style)"
+
+[rust]
+symbol = " "
+style = "fg:#2F3138 bg:#D8D7E0"
+format = "[ $symbol ($version) ]($style)"
+
+[scala]
+symbol = " "
+style = "fg:#2F3138 bg:#D8D7E0"
+format = "[ $symbol ($version) ]($style)"
+
+# -------------------------
+# Docker
+# -------------------------
+
+[docker_context]
+symbol = " "
+style = "fg:#ECECF2 bg:#7E9CB7"
+format = "[ $symbol $context ]($style)"
+
+# -------------------------
+# Hora
+# -------------------------
+
+[time]
+disabled = false
+time_format = "%R"
+style = "fg:#ECECF2 bg:#536A82"
+format = "[  $time ]($style)"
